@@ -14,8 +14,8 @@ int main() {
 	
 	do {
         cout << "\nMenu:\n";
-        cout << "1. Ingresar matriz de adyacencias\n";
-        cout << "2. Imprimir matriz de adyacencias\n";
+        cout << "1. Ingresar matriz \n";
+        cout << "2. Imprimir matriz \n";
         cout << "3. Verificar si existe un circuito desde un vertice\n";
         cout << "4. Salir\n";
         cout << "Ingrese su opcion: ";
