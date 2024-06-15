@@ -1,15 +1,15 @@
 #include<iostream>
 using namespace std;
-
-void ingresarMatriz(int [6][6], int i, int j);
-void imprimirMatriz(int [6][6]);
-bool checkCircuito(int [6][6], int);
+const int orden = 5;
+void ingresarMatriz(int [orden][orden], int i, int j);
+void imprimirMatriz(int [orden][orden]);
+bool checkCircuito(int [orden][orden], int);
 
 
 int main() {
 	int opcion;
 	bool sw = false;
-	int matriz[6][6];
+	int matriz[orden][orden];
 	int i = 0,  j = 0;
 	
 	do {
@@ -36,11 +36,11 @@ int main() {
 }
 
 
-void ingresarMatriz(int matriz[6][6], int i, int j) {
-	if(i >= 6) {
+void ingresarMatriz(int matriz[orden][orden], int i, int j) {
+	if(i >= orden) {
 		return;
 	}
-	if(j < 6) {
+	if(j < orden) {
 		cout<<"Ingrese el valor de matriz[" << i << "][" << j << "]";
 		cin >> matriz[i][j];
 		ingresarMatriz(matriz, i, j +1 );
@@ -51,10 +51,10 @@ void ingresarMatriz(int matriz[6][6], int i, int j) {
 	
 }
 
-void imprimirMatriz(int matriz[6][6]) {
+void imprimirMatriz(int matriz[orden][orden]) {
 	cout<<"La matriz resultante es:";
-	for(int i=0; i<6; i++){
-		for(int j=0; j<6; j++){
+	for(int i=0; i<orden; i++){
+		for(int j=0; j<orden; j++){
 			cout<<matriz[i][j];
 		}
 		cout<< endl;
